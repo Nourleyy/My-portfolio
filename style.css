@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -44,9 +47,11 @@ body{
 }
 
 .logo{
-    font-size: 3rem;
+    font-family: "Mr Dafoe", cursive;
+    font-style: normal;
+    font-size: 4rem;
     color: var(--text-color);
-    font-weight: 800;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
 
@@ -57,6 +62,9 @@ body{
 }
 
 .logo span{
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 400;
+    font-style: normal;
     text-shadow: 0 0 25px var(--main-color);
 
 }
@@ -64,17 +72,14 @@ body{
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 4rem ;
+    margin-left: 5rem ;
     font-weight: 500;
     transition: 0.3s ease;
 
 }
 
-.navbar a:hover,
-.navbar a.active{
+.navbar a:hover {
     color: var(--main-color);
-    
-
 }
 
 #menu-icon{
@@ -286,6 +291,11 @@ span{
     font-size: 6rem;
     margin: 5rem 0;
 }
+.about-content{
+    padding:2rem;
+    margin: 2px;
+    height: 100vh;
+}
 .about-content h2{
     text-align:left;
     line-height:1.5;
@@ -295,26 +305,56 @@ span{
 }
 .about-content p{
     font-size: 1.8rem;
-    margin:2rem 0 3rem;
+    margin:2rem 2rem 3rem;
 }
 .about .heading{
-    margin:0;
-}
-.about .text-animation span::before{
-    content: "Web Developer";
-    color: var(--main-color);
-    animation: words 20s infinite;
+    margin: 0;
 }
 
-.about .text-animation span::after{
-    content: "";
-    background-color:url(aboutme.jpg);
+.about-content .myskills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+}
+
+.about-content .myskills .skill-item{
+    flex: 0 0 100%;
+    max-width:100%;
+}
+.about-content .myskills .skill-item h5{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-color);
+    text-transform: capitalize;
+
+}
+.about-content .myskills .skill-item .progress{
+    background-color: var(--bg-color);
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.about-content .myskills .skill-item .progress-in{
+    margin-bottom: 30px;
+    left:0;
+    top:0;
+    height:100%;
+    border-radius: 4px;
+    background-color: var(--main-color);
+
+}
+
+.about-content .myskills .skill-item .skill-percent {
     position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left:3px solid var(--text-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    right:0;
+    color: var(--text-color);
+    top:-40px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
 ::-webkit-scrollbar{
