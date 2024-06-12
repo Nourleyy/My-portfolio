@@ -19,7 +19,7 @@
     --second-bg-color: #161616;
     --text-color: white;
     --main-color: #e2218f;
-    --second-main-color: #5ea6d8;
+    --second-main-color: rgb(1, 0, 1);
 
 }
 html{
@@ -72,11 +72,11 @@ body{
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 5rem ;
+    margin-left: 4rem ;
     font-weight: 500;
     transition: 0.3s ease;
-
 }
+
 
 .navbar a:hover {
     color: var(--main-color);
@@ -281,7 +281,7 @@ span{
     align-items :center;
     gap:10rem;
     color: var(--text-color);  
-    background:url(aboutme.jpg)center no-repeat;
+    background:url(aboutme.jpg) center no-repeat;
     background-size: cover;
    
 }
@@ -370,6 +370,7 @@ span{
 
 .services{
     background: var(--second-bg-color);
+    
 }
 .services h1{
     margin-bottom: 5rem;
@@ -388,7 +389,7 @@ span{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--main-color);
+    background:radial-gradient(rgba(255, 102, 255, 0.8),var(--main-color));
     padding: 1rem 2rem 1rem;
     height: 450px;
     border-radius: 2rem;
@@ -396,9 +397,9 @@ span{
     transition: 0.4s ease-in-out;
 }
 .services-container .services-box:hover{
-    background-color: white;
     color: var(--bg-color);
     transform: scale(1.03);
+    
 }
 
 .services-box i{
@@ -408,9 +409,11 @@ font-size: 6rem;
 }
 .services-box h3{
     font-size: 3rem;
+    font-weight: 600;
 }
 .services-box p{
     font-size: 1.6rem;
+    font-weight: 300;
     margin: 1rem 0 3rem;
     
 }
@@ -432,6 +435,156 @@ font-size: 6rem;
 
 .btnser:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--text-color);
+    background-color: var(--bg-color);
 }
+
+.projects{
+    background:var(--second-bg-color)
+   
+}
+.projects h2{
+    margin-bottom: 8rem;
+}
+.projects-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+.projects-container .projects-box{
+    position: relative;
+    height: 450px;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.projects-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.projects-box:hover img{
+    transform:scale(1.1);
+}
+.projects-box .projects-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    
+
+}
+
+.projects-box .projects-info:hover{
+    background:radial-gradient(rgba(101, 20, 68, 0.8),var(--main-color));
+    transform: scale(1.1);
+}
+.projects-info h4{
+    font-size: 3rem;
+    text-shadow: 1px 0px 1px black;
+    color: white;
+    font-weight: 700;
+}
+
+.projects-info p{
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 0px 0px var(--second-bg-color);
+    
+}
+
+.projects-info a{
+    color:white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 4.5rem;
+    background: white;
+    border: 2px solid var(--main-color);
+
+}
+
+.projects-info a i{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.projects-info .btnser:hover{
+    transform: scale(1);
+    background-color: var(--second-bg-color);
+}
+
+.contact h2{
+    font-weight: 850;
+}
+.contact form{
+    max-width: 70rem;
+    text-align: center;
+}
+
+.contact .input-container {
+    display: flex;
+    width: 100%;
+    margin: 2rem 23rem;
+    border-radius: 0.8rem;
+    background: var(--main-color);
+  }
+  
+  /* Style the form icons */
+  .contact .input-container i {
+    font-size: 3rem;
+    color: white;
+    margin:1rem 1rem 1rem;
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    resize: none;
+  }
+  
+.contact .btnser{
+    padding:1rem 2.6rem;
+    background-color: var(--bg-color);
+    border-radius: 10rem;
+    margin-left: 84rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.contact .btnser:hover{
+    transform: scale(1.1);
+    background: var(--text-color);
+    
+}
+
+
+  /* Set a style for the submit button */
+ 
